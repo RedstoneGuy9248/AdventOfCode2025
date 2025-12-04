@@ -16,9 +16,6 @@ const main = async () => {
             element.forEach((item, location) => {
                 if (item !== "@") {return false;}
                 let adjacent = [data[index - 1]?.[location - 1], data[index - 1]?.[location], data[index - 1]?.[location + 1], element[location - 1], element[location + 1], data[index + 1]?.[location - 1], data[index + 1]?.[location], data[index + 1]?.[location + 1]];
-                // adjacent = adjacent.map(element => {
-                //     if (element !== "@" || element !== ".") {return "."} else {return element}
-                // });
                 if (adjacent.filter(element => element === "@").length < 4) {newData[index][location] = "."; sum++; currentCycleRemoved++};
             });
         });;
