@@ -43,7 +43,7 @@ const main = async () => {
                 circuits.splice(indexB, 1);
             };
         });
-        console.log(x);
+        console.log(circuits.length);
         if (circuits.length === 1) {result = connections[connections.length - 1]; break} else {x++};
     };
     console.log(result.map(element => element[0]).reduce((a, b) => a * b, 1));

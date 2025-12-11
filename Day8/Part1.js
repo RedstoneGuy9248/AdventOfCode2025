@@ -36,7 +36,7 @@ const main = async () => {
             circuits[indexA].push(b);
         } else if (indexA !== indexB) {
             circuits[indexA].push(...circuits[indexB]);
-            circuits.splice(indexB, 1);
+            circuits[indexB] = [];
         };
     });
     console.log(circuits.sort((a, b) => b.length - a.length).slice(0, 3).map(element => element.length).reduce((a, b) => a * b, 1));
